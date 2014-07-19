@@ -26,6 +26,7 @@
     }
     div:hover svg {
       stroke: #EAA830;
+      fill: #EAA830;
     }
     .add2 svg {
       stroke: #86C2A9;
@@ -40,6 +41,10 @@
     .delete2 svg {
       stroke: #fff;
       fill: #86C2A9;
+    }
+    .delete:hover svg {
+      stroke: #000;
+      fill: #EAA830;
     }
     </style>
 </head>
@@ -65,6 +70,13 @@
     <div class="delete delete2">
         <svg><use xlink:href="svg-defs.svg#circle-delete"></use></svg> Text
     </div>
+
+    <p>
+      <a href="https://github.com/getsetbro/svg.using.use">code on github</a>
+    </p>
+
+  <!-- support for oldIE -->
+  <script src="svg4everybody.min.js"></script>
 </body>
 
 </html>
