@@ -1,6 +1,32 @@
-  <svg xmlns="http://www.w3.org/2000/svg" id='a'>
-    <symbol id="codepen" viewBox="0 0 10 10">
-      <title>CodePen</title>
-      <circle style="fill:none;stroke:#000000;stroke-miterlimit:10;" cx="3.94" cy="3.011" r="2.511"/>
+﻿<svg xmlns="http://www.w3.org/2000/svg">
+    <symbol viewBox="0 0 13.341 13.341" id="circle-add">
+        <title>circle-add</title>
+        <g stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" fill="none">
+            <circle cx="6.671" cy="6.671" r="5.921" />
+            <path d="M4.219 6.67h5.05M6.744 4.098v5.097" />
+        </g>
     </symbol>
-  </svg>
+    <symbol viewBox="0 0 13.341 13.341" id="circle-check">
+        <title>circle-check</title>
+        <g stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" fill="none">
+            <circle cx="6.671" cy="6.671" r="5.921" />
+            <path stroke="black" d="M3.979 6.68l1.786 1.786M9.362 4.868l-3.604 3.605" />
+        </g>
+    </symbol>
+    <symbol viewBox="0 0 13.341 13.341" id="circle-delete">
+        <title>circle-delete</title>
+        <g stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+            <circle stroke="none" cx="6.671" cy="6.671" r="5.921" />
+            <path fill="none" d="M4.942 4.878l3.571 3.571M8.546 4.844l-3.604 3.605" />
+        </g>
+    </symbol>
+
+    <symbol viewBox="0 0 13.341 13.341" id="circle-remove">
+        <title>circle-remove</title>
+        <g stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" fill="none">
+            <circle cx="6.421" cy="6.421" r="5.921"></circle>
+            <path d="M3.969 6.42h5.05"></path>
+        </g>
+    </symbol>
+
+</svg>
