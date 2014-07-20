@@ -9,12 +9,12 @@
     <style>
     body{
       font-family: sans-serif;
-      color: #0B916E;
     }
     div{
       display: inline-block;
       height: 55px;
       width: 111px;
+      color: #0B916E;
     }
     div svg {
         stroke: #0B916E;
@@ -30,19 +30,22 @@
       stroke: #EAA830;
       fill: #EAA830;
     }
+    .add2, .check2, .delete2{
+      color: #545F7F;
+    }
     .add2 svg {
-      stroke: #86C2A9;
+      stroke: #545F7F;
     }
     .check2 svg {
       stroke: #545F7F;
     }
     .delete svg {
       stroke: #fff;
-      fill: #545F7F;
+      fill: #0B916E;
     }
     .delete2 svg {
       stroke: #fff;
-      fill: #86C2A9;
+      fill: #545F7F;
     }
     .delete:hover svg {
       stroke: #000;
@@ -52,30 +55,31 @@
 </head>
 
 <body>
-    <div class="add1">
-        <svg><use xlink:href="svg-defs.svg#circle-add"></use></svg> Text
-    </div>
-    <div class="add2">
-        <svg><use xlink:href="svg-defs.svg#circle-add"></use></svg> Text
-    </div>
+  <p>First, the same icon used twice but styled with different color and hover color via CSS.</p>
+  <div class="add1">
+      <svg><use xlink:href="svg-defs.svg#circle-add"></use></svg> Text
+  </div>
+  <div class="add2">
+      <svg><use xlink:href="svg-defs.svg#circle-add"></use></svg> Text
+  </div>
+  <p>Next, an icon with 2 colors. The circle is styled via css but the checkmark has the STROKE color specified in the SVG file so it cannot be styled via CSS.</p>
+  <div class="check1">
+      <svg><use xlink:href="svg-defs.svg#circle-check"></use></svg> Text
+  </div>
+  <div class="check2">
+      <svg><use xlink:href="svg-defs.svg#circle-check"></use></svg> Text
+  </div>
+  <p>Then, the FILL of the circle is styled instead of the stroke. On hover, the STROKE is a different color than the FILL.</p>
+  <div class="delete delete1">
+      <svg><use xlink:href="svg-defs.svg#circle-delete"></use></svg> Text
+  </div>
+  <div class="delete delete2">
+      <svg><use xlink:href="svg-defs.svg#circle-delete"></use></svg> Text
+  </div>
 
-    <div class="check1">
-        <svg><use xlink:href="svg-defs.svg#circle-check"></use></svg> Text
-    </div>
-    <div class="check2">
-        <svg><use xlink:href="svg-defs.svg#circle-check"></use></svg> Text
-    </div>
-
-    <div class="delete delete1">
-        <svg><use xlink:href="svg-defs.svg#circle-delete"></use></svg> Text
-    </div>
-    <div class="delete delete2">
-        <svg><use xlink:href="svg-defs.svg#circle-delete"></use></svg> Text
-    </div>
-    
-    <p>
-      <a href="https://github.com/getsetbro/svg.using.use">code on github</a>
-    </p>
+  <p>
+    <a href="https://github.com/getsetbro/svg.using.use">code on github</a>
+  </p>
 
   <!-- support for oldIE -->
   <script src="svg4everybody.min.js"></script>
