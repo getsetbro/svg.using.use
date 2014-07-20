@@ -1,0 +1,48 @@
+
+@import "compass";
+
+body {
+    font-family: sans-serif;
+}
+div {
+    display: inline-block;
+    height: 55px;
+    width: 111px;
+    color: #0B916E;
+  svg {
+    stroke: #0B916E;
+    fill: #0B916E;
+    width: 44px;
+    height: 44px;
+    vertical-align: middle;
+  }
+  &:hover {
+      color: #EAA830;
+  }
+  &:hover svg {
+      stroke: #EAA830;
+      fill: #EAA830;
+  }
+}
+.add2, .check2, .delete2 {
+  color: #545F7F;
+}
+.add2 svg, .check2 svg {
+  stroke: #545F7F;
+}
+.delete{
+  svg {
+    stroke: #fff;
+    fill: #0B916E;
+  }
+  &:hover svg {
+    stroke: #000;
+    fill: #EAA830;
+  }
+}
+.delete2{
+  svg {
+    stroke: #fff;
+    fill: #545F7F;
+  }
+}
