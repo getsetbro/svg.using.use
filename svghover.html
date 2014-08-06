@@ -7,21 +7,16 @@
   <title>SVG.using.USE</title>
   <link rel="stylesheet" href="stylesheets/screen.css" />
   <style>
-
-    span{
-      display: none
-    }
-    div:hover + span{
-      display: inline-block;
+    div span{
+      display:none;
     }
   </style>
 </head>
 
 <body>
   <div class="add1">
-      <svg><use xlink:href="svg-defs.svg#circle-add"></use></svg> Text
+      <svg><use xlink:href="svg-defs.svg#circle-add"></use></svg> Text <span>Hover is happening!!!</span>
   </div>
-  <span>Hover is happening!!!</span>
   <br>
   <div class="add2">
     <svg viewBox="0 0 13.341 13.341" id="circle-add">
@@ -30,9 +25,8 @@
             <circle cx="6.671" cy="6.671" r="5.921"></circle>
             <path d="M4.219 6.67h5.05M6.744 4.098v5.097"></path>
         </g>
-    </svg> Text
+    </svg> Text <span>Hover is happening!!!</span>
   </div>
-  <span>Hover is happening!!!</span>
 
   <p>
     <a href="https://github.com/getsetbro/svg.using.use">code on github</a>
@@ -40,6 +34,14 @@
 
   <!-- support for oldIE -->
   <script src="svg4everybody.min.js"></script>
-
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+  $('div').on('mouseenter', function(a){
+    $(this).find('span').show();
+  });
+  $('div').on('mouseleave', function(a){
+    $(this).find('span').hide();
+  });
+  </script>
 </body>
 </html>
