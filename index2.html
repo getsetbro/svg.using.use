@@ -1,18 +1,45 @@
 <!DOCTYPE html>
 <html>
+<head lang="en-us">
+  <meta charset='utf-8' />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SVG.using.USE</title>
+  <link rel="stylesheet" href="stylesheets/screen.css" />
+  <style>
 
-<head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="description" content="Svg.using.use : " />
-    <title>Svg.using.use</title>
-    <style>
-
-    </style>
+    span{
+      display: none
+    }
+    div:hover + span{
+      display: inline-block;
+    }
+  </style>
 </head>
 
 <body>
-...
-</body>
+  <div class="add1">
+      <svg><use xlink:href="svg-defs.svg#circle-add"></use></svg> Text
+  </div>
+  <span>Hover is happening!!!</span>
+  <br>
+  <div class="add2">
+    <svg viewBox="0 0 13.341 13.341" id="circle-add">
+        <title>circle-add</title>
+        <g stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" fill="none">
+            <circle cx="6.671" cy="6.671" r="5.921"></circle>
+            <path d="M4.219 6.67h5.05M6.744 4.098v5.097"></path>
+        </g>
+    </svg> Text
+  </div>
+  <span>Hover is happening!!!</span>
 
+  <p>
+    <a href="https://github.com/getsetbro/svg.using.use">code on github</a>
+  </p>
+
+  <!-- support for oldIE -->
+  <script src="svg4everybody.min.js"></script>
+
+</body>
 </html>
