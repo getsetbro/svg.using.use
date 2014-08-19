@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en-us">
+  <meta charset='utf-8' />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SVG.using.USE</title>
+  <link rel="stylesheet" href="stylesheets/screen.css" />
+  <style>
+    body{
+      position: relative;
+    }
+    .hide-up{
+      position: absolute;
+      top:-999px;
+      left:222px;
+    }
+    .bring-down{
+      top:99px;
+    }
+  </style>
+</head>
+
+<body>
+<div id="hideUp" class="hide-up">
+  <div class="add1">
+      <svg><use xlink:href="svg-defs.svg#circle-add"></use></svg> Text
+  </div>
+  <div class="add2">
+      <svg><use xlink:href="svg-defs.svg#circle-add"></use></svg> Text
+  </div>
+  <div class="check1">
+      <svg><use xlink:href="svg-defs.svg#circle-check"></use></svg> Text
+  </div>
+  <div class="check2">
+      <svg><use xlink:href="svg-defs.svg#circle-check"></use></svg> Text
+  </div>
+  <div class="delete delete1">
+      <svg><use xlink:href="svg-defs.svg#circle-delete"></use></svg> Text
+  </div>
+  <div class="delete delete2">
+      <svg><use xlink:href="svg-defs.svg#circle-delete"></use></svg> Text
+  </div>
+</div>
+<p>
+  <button type="button" id=btnShow>Show me a thing</button>
+</p>
+  <p>
+    <a href="https://github.com/getsetbro/svg.using.use">code on github</a>
+  </p>
+
+  <!-- support for oldIE -->
+  <script src="svg4everybody.min.js"></script>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+  $('#btnShow').on('click',function(){
+    $('#hideUp').addClass('bring-down');
+  });
+</script>
+</body>
+</html>
