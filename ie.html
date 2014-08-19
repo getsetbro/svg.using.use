@@ -22,48 +22,27 @@
 </head>
 
 <body>
-<section id="hideUp" class="hide-up">
+<section>
+  On page from the get go and not hidden:
   <div class="add1">
       <svg><use xlink:href="svg-defs.svg#circle-add"></use></svg> Text
-  </div>
-  <div class="add2">
-      <svg><use xlink:href="svg-defs.svg#circle-add"></use></svg> Text
-  </div>
-  <div class="check1">
-      <svg><use xlink:href="svg-defs.svg#circle-check"></use></svg> Text
-  </div>
-  <div class="check2">
-      <svg><use xlink:href="svg-defs.svg#circle-check"></use></svg> Text
-  </div>
-  <div class="delete delete1">
-      <svg><use xlink:href="svg-defs.svg#circle-delete"></use></svg> Text
-  </div>
-  <div class="delete delete2">
-      <svg><use xlink:href="svg-defs.svg#circle-delete"></use></svg> Text
   </div>
 </section>
-<section>
+<section id="hideUp" class="hide-up">
+  On page but hidden
   <div class="add1">
       <svg><use xlink:href="svg-defs.svg#circle-add"></use></svg> Text
   </div>
-  <div class="add2">
-      <svg><use xlink:href="svg-defs.svg#circle-add"></use></svg> Text
-  </div>
-  <div class="check1">
-      <svg><use xlink:href="svg-defs.svg#circle-check"></use></svg> Text
-  </div>
-  <div class="check2">
-      <svg><use xlink:href="svg-defs.svg#circle-check"></use></svg> Text
-  </div>
-  <div class="delete delete1">
-      <svg><use xlink:href="svg-defs.svg#circle-delete"></use></svg> Text
-  </div>
-  <div class="delete delete2">
-      <svg><use xlink:href="svg-defs.svg#circle-delete"></use></svg> Text
-  </div>
+</section>
+<section id="redwing">
+  Not on page at start but not hidden when added.
+</section>
+<section id="chippewa" class="hide-up">
+  Not on page at start and hidden when added to the page.
 </section>
 <p>
-  <button type="button" id=btnShow>Show me a thing</button>
+  <button type="button" id="addthings">Append items</button>
+  <button type="button" id="btnShow">Now show itesm</button>
 </p>
   <p>
     <a href="https://github.com/getsetbro/svg.using.use">code on github</a>
@@ -73,8 +52,12 @@
   <script src="svg4everybody.min.js"></script>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script>
+  var asdf = '<div class="add1"><svg><use xlink:href="svg-defs.svg#circle-add"></use></svg> Text</div>';
   $('#btnShow').on('click',function(){
-    $('#hideUp').addClass('bring-down');
+    $('#hideUp, #chippewa').addClass('bring-down');
+  });
+  $('#addthings').on('click',function(){
+    $('#redwing, #chippewa').append(asdf);
   });
 </script>
 </body>
